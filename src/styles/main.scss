@@ -1,0 +1,9 @@
+@import "./theme";
+
+
+body{ margin: 0; }
+
+@include set-theme(
+    generate-purple-theme()
+);
+

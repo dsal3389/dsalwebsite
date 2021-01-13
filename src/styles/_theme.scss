@@ -1,0 +1,51 @@
+@import "./animations";
+@import "./elements/all";
+
+
+/*
+* it may look redundent the i am repeating tags here and at main.scss
+* but there i put only elements that are effected by the theme
+* they build seperetly for each theme, so if i put stuff that dont
+* requires the theme it will be just a waist of memory
+*/
+@mixin generic-theme($theme){
+    $primary: map-get($theme, "primary");
+    $accent: map-get($theme, "accent");
+    $header-color: map-get($theme, "header-color");
+    $text-color: map-get($theme, "text-color");
+
+    body{ background-color: map-get($theme, "background");}
+    .text, h1, h2, h3, h4, h5, h6{ color: $header-color }
+    .primary{ color: $primary }
+    .accent{ color: $accent }
+    p{ color: $text-color; }
+}
+
+@function generate-purple-theme(){
+    $theme: (
+        "background": #0a0913,
+        "foreign": #202060,
+        "primary": #b030b0,
+        "accent": #602080,
+        "header-color": #efe3ff,
+        "text-color": #aa99d1,
+    );
+    @return $theme;
+}
+
+@function generate-light-theme(){
+    $theme: (
+        "background": #333,
+        "foreign": #fefefe,
+        "primary": #357edd,
+        "accent": #7846a7,
+    );
+    @return $theme;
+}
+
+@mixin set-theme($theme){
+    @include animation-theme($theme);
+    @include generic-theme($theme);
+    @include nav-theme($theme);
+    @include home-theme($theme);
+}

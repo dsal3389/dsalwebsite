@@ -29,8 +29,13 @@ export class Router{
      */
     get route(): route_{
         const hash = window.location.hash;
-        const route = this.routes_.filter(r => new RegExp('#?' + r.path + '\/?').test(hash))
-        return route.length ? route[0] : this.routes_[0];
+        const route = this.routes_.filter(r => new RegExp('#?' + r.path + '\/?').test(hash));
+
+        if(!route.length){
+            window.location.hash = this.routes_[0].path;
+            return this.routes_[0];
+        }
+        return route[0];
     }
 
     getChildRoute(route: route_): route_{

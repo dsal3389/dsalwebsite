@@ -1,0 +1,27 @@
+
+
+@mixin contect-theme($theme){
+    $primary: map-get($theme, "primary");
+
+    #contect{
+        #social{
+            
+            ul{
+                list-style: none;
+                padding-left: 6px;
+
+                li{
+                    p{
+                        margin: 6px;
+                        a{ 
+                            color: $primary; 
+                            text-decoration: none;
+            
+                            &:hover{ text-decoration: underline; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

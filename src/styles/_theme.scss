@@ -61,4 +61,5 @@
     @include generic-theme($theme);
     @include nav-theme($theme);
     @include home-theme($theme);
+    @include contect-theme($theme);
 }

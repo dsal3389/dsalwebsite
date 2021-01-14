@@ -17,7 +17,7 @@ export class Router{
     constructor(routes: route_[]){
         this.routes_ = routes;
         this.route.handler?.then(h => h.build()); // load the current path, this will do for now
-        this.absoluteRealURL = window.location.href.replace(/\/#[a-z]*\/?/, ""); // removes the hash
+        this.absoluteRealURL = window.location.href.replace(/\/?#[a-z]*\/?/, ""); // removes the hash
         
         window.history.pushState({}, "[dsal3389]", "/"); // make the url look better
         window.addEventListener('hashchange', () => this.handleRouteChange(), false);

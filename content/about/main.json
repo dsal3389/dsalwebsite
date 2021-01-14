@@ -1,8 +1,8 @@
 {
     "socials":[
-        {"git hub": "https://github.com/dsal3389"},
-        {"stackoverflow": "https://stackoverflow.com/users/9245201/dsal3389"},
-        {"tryhackme": "https://tryhackme.com/p/dsal3389"},
-        {"steam": "https://steamcommunity.com/id/dsal3389_"}
+        ["git hub", "https://github.com/dsal3389"],
+        ["stackoverflow", "https://stackoverflow.com/users/9245201/dsal3389"],
+        ["tryhackme", "https://tryhackme.com/p/dsal3389"],
+        ["steam", "https://steamcommunity.com/id/dsal3389_"]
     ]
 }

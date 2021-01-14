@@ -1,3 +1,4 @@
+import { appConfig } from '../app.conf';
 
 
 /**
@@ -43,7 +44,7 @@ function createHandler(options: {
      */
     (() => {
         const request = new XMLHttpRequest();
-        request.open('GET', options.template);
+        request.open('GET', appConfig.production ? `${appConfig.productionDomain}/${appConfig.productionFolder}/${options.template}` : options.template);
         request.send();
 
         return new Promise((resolve, reject) => {

@@ -2,20 +2,23 @@
 
 
 body{ font-family: Hack, monospace; margin: 0 }
-p{ margin-bottom: 14px }
+p{ margin-bottom: 14px; line-height: 2; }
+button{ outline: none; }
 
 .display-1, .display-2, .display-3{ font-weight: 100; }
 .display-1{ font-size: 3.5rem; }
 .display-2{ font-size: 3rem; }
 .display-2{ font-size: 2.5rem; }
 
-.section{margin-bottom: 4rem;}
+.space{flex: 1;}
+.section{margin-bottom: 4rem; max-width: 800px;}
 
 .mw-page{
     margin: auto;
     max-width: 1180px;
     padding: 0 32px;
     box-sizing: border-box;
+    transition-duration: 250ms;
 
     @media (max-width: 1350px){ max-width: 980px; }
     @media (max-width: 1140px){ max-width: 870px; }

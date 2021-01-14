@@ -13,5 +13,19 @@ import { Router } from './scripts/router';
 
 const appRouter = new Router([
     {path: 'home', handler: import('./scripts/handlers/home').then(h => h.HomeHandler)},
-    {path: 'about', handler: import('./scripts/handlers/about').then(h => h.AboutPageHandler)},
+    {path: 'contect', handler: import('./scripts/handlers/contect').then(h => h.ContectHandler)}
 ]);
+
+
+const copyURLbtn = document.getElementById('current-url-btn')!;
+copyURLbtn.addEventListener('click', (e) => {
+    const inp = <HTMLInputElement>document.createElement('input');
+    inp.value = appRouter.absolutePath;
+
+    document.body.appendChild(inp);
+    inp.select();
+
+    document.execCommand('copy');
+    document.body.removeChild(inp);
+});
+

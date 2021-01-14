@@ -11,13 +11,14 @@ interface route_{
 }
 
 export class Router{
+    private absoluteRealURL: string;
     private routes_: route_[];
     
     constructor(routes: route_[]){
         this.routes_ = routes;
         this.route.handler?.then(h => h.build()); // load the current path, this will do for now
-
-        console.log('changing to a good looking URL');
+        this.absoluteRealURL = window.location.href.replace(/\/#[a-z]*\/?/, ""); // removes the hash
+        
         window.history.pushState({}, "[dsal3389]", "/"); // make the url look better
         window.addEventListener('hashchange', () => this.handleRouteChange(), false);
     }
@@ -38,6 +39,14 @@ export class Router{
             return this.routes_[0];
         }
         return route[0];
+    }
+
+    /**
+     * returns the correct absolute path, this only
+     * effective for git pages, when the site is on production mode
+     */
+    get absolutePath(): string{
+        return `${this.absoluteRealURL}/${window.location.hash}`;
     }
 
     getChildRoute(route: route_): route_{

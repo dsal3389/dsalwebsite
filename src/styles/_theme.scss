@@ -11,14 +11,23 @@
 @mixin generic-theme($theme){
     $primary: map-get($theme, "primary");
     $accent: map-get($theme, "accent");
+    $warn: map-get($theme, "warn");
     $header-color: map-get($theme, "header-color");
     $text-color: map-get($theme, "text-color");
 
     body{ background-color: map-get($theme, "background");}
+    p{ color: $text-color; }
+
     .text, h1, h2, h3, h4, h5, h6{ color: $header-color }
     .primary{ color: $primary }
     .accent{ color: $accent }
-    p{ color: $text-color; }
+    .warn{ color: $warn }
+    .mark{ background-color: transparentize($accent, .6) }
+
+    ::selection{
+        background-color: transparentize($text-color, .8);
+        color: lighten($primary, 15%);
+    }
 }
 
 @function generate-purple-theme(){
@@ -26,19 +35,23 @@
         "background": #0a0913,
         "foreign": #202060,
         "primary": #b030b0,
-        "accent": #602080,
+        "accent": #6e2a91,
+        "warn": #c75f5f,
         "header-color": #efe3ff,
         "text-color": #aa99d1,
     );
     @return $theme;
 }
 
-@function generate-light-theme(){
+@function generate-red-theme(){
     $theme: (
-        "background": #333,
-        "foreign": #fefefe,
-        "primary": #357edd,
-        "accent": #7846a7,
+        "background": #140509,
+        "foreign": #801336,
+        "primary": #c72c41,
+        "accent": #ee4540,
+        "warn": #fa003e,
+        "header-color": #fac7c6,
+        "text-color": #a08483
     );
     @return $theme;
 }

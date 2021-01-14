@@ -5,7 +5,7 @@
  * the reltive path, this made to make the URL look better
  */
 export const appConfig = {
-    production: true,
+    production: true, // can be changed in the frontend, but why would you do that?
     productionFolder: 'dist',
     productionDomain: 'https://dsal3389.github.io/dsalwebsite'
 }

@@ -1,8 +1,11 @@
 
 
 @mixin nav-theme($theme){
+    $primary: map-get($theme, "primary");
     $text-color: map-get($theme, "text-color");
+
     $height: 56px;
+    $middle: calc((#{$height} / 2) - 8px); // centering the navigation buttons / links
 
     #main-nav{
         background-color: transparent;
@@ -14,18 +17,28 @@
             height: 100%;
 
             div{
-                justify-content: center;
-                padding-top: calc((#{$height} / 2) - 8px);
+                display: flex;
+                padding-top: $middle;
 
-                a{ 
+
+                a, button{ 
                     font-size: 16px;
                     text-decoration: none; 
-                    padding: calc((#{$height} / 2) - 8px);
+                    padding: $middle;
 
                     &:hover{
-                        color: darken($text-color, 30%);
+                        color: $primary;
                         text-decoration: line-through;
                     }
+                }
+
+                button{
+                    padding: 0;
+                    background-color: transparent;
+                    cursor: pointer;
+                    border: none;
+                    height: min-content;
+                    margin: $middle 0;
                 }
             }
         }

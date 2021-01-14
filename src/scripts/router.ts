@@ -17,6 +17,7 @@ export class Router{
         this.routes_ = routes;
         this.route.handler?.then(h => h.build()); // load the current path, this will do for now
 
+        console.log('changing to a good looking URL');
         window.history.pushState({}, "[dsal3389]", "/"); // make the url look better
         window.addEventListener('hashchange', () => this.handleRouteChange(), false);
     }

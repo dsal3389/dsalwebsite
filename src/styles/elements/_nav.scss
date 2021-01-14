@@ -1,6 +1,7 @@
 
 
 @mixin nav-theme($theme){
+    $text-color: map-get($theme, "text-color");
     $height: 56px;
 
     #main-nav{
@@ -20,6 +21,11 @@
                     font-size: 16px;
                     text-decoration: none; 
                     padding: calc((#{$height} / 2) - 8px);
+
+                    &:hover{
+                        color: darken($text-color, 30%);
+                        text-decoration: line-through;
+                    }
                 }
             }
         }

@@ -1,4 +1,4 @@
-import { appConfig } from '../app.conf';
+import { fetchJSON } from '../http';
 import { Handler, HandlerInitComponent } from './handler';
 
 
@@ -17,19 +17,7 @@ export class ContactHandler implements HandlerInitComponent{
      * response in the HTML
      */
     onReady(){
-        const socials = new XMLHttpRequest();
-        socials.open('GET', `${appConfig.productionDomain}/${appConfig.productionContent}` + '/about/main.json');
-        socials.responseType = 'json';
-        socials.send();
-
-        (() => {
-            return new Promise<socialsResponse>((resolve, reject) => {
-                socials.onreadystatechange = () => {
-                    if(socials.readyState == XMLHttpRequest.DONE)
-                        resolve(socials.response);
-                }
-            });
-        })().then((res) => {
+        fetchJSON<socialsResponse>('about/main.json').then((res) => {
             const socialHTML = <HTMLUListElement>document.getElementById('social-list');
             let counter = 0;
 

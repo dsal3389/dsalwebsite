@@ -1,4 +1,4 @@
-import { appConfig } from '../app.conf';
+import { fetchHTML } from '../http';
 
 
 /**
@@ -42,18 +42,7 @@ function createHandler(options: {
      * fetching the remplate, placing the HTML into the DOM and
      * calling onReady when finished
      */
-    (() => {
-        const request = new XMLHttpRequest();
-        request.open('GET', appConfig.production ? `${appConfig.productionDomain}/${appConfig.productionFolder}/${options.template}` : options.template);
-        request.send();
-
-        return new Promise((resolve, reject) => {
-            request.onreadystatechange = () => {
-                if(request.readyState == XMLHttpRequest.DONE)
-                    resolve(request.responseText);
-            };
-        });
-    })().then(html => {
+    fetchHTML(options.template).then(html => {
         htmlView.innerHTML = (html as string);
         if(component.onReady instanceof Function)
             component.onReady();

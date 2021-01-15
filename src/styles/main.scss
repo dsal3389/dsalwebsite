@@ -34,3 +34,9 @@ button{ outline: none; }
         generate-red-theme()
     ); 
 }
+
+.green{
+    @include set-theme(
+        generate-green-theme()
+    ); 
+}

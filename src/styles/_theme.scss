@@ -41,7 +41,7 @@
             height: 32px;
             width: 32px;
             border: none;
-            border-radius: 5px;
+            background-color: $primary;
         }
 
         #themes-options{
@@ -49,7 +49,7 @@
             display: none;
             bottom: 32px;
 
-            button{ margin-bottom: 8px; border-radius: 50px; cursor: pointer; }
+            button{ margin-bottom: 8px; cursor: pointer; }
         }
 
         &:hover > #themes-options{
@@ -80,6 +80,19 @@
         "warn": #fa003e,
         "header-color": #fac7c6,
         "text-color": #a08483
+    );
+    @return $theme;
+}
+
+@function generate-green-theme(){
+    $theme: (
+        "background": #070707,
+        "foreign": #1f3029,
+        "primary": #26da3e,
+        "accent": #36ad4a,
+        "warn": #a00129,
+        "header-color": #baf3d6,
+        "text-color": #c0d8cd
     );
     @return $theme;
 }

@@ -46,7 +46,7 @@ export class Router{
      * effective for git pages, when the site is on production mode
      */
     get absolutePath(): string{
-        return `${this.absoluteRealURL}/${window.location.hash}`;
+        return `${this.absoluteRealURL}${window.location.hash}`;
     }
 
     getChildRoute(route: route_): route_{

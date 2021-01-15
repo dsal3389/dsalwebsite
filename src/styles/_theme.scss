@@ -12,6 +12,7 @@
     $primary: map-get($theme, "primary");
     $accent: map-get($theme, "accent");
     $warn: map-get($theme, "warn");
+    $foreign: map-get($theme, "foreign");
     $header-color: map-get($theme, "header-color");
     $text-color: map-get($theme, "text-color");
 
@@ -28,12 +29,39 @@
         background-color: transparentize($text-color, .8);
         color: lighten($primary, 15%);
     }
+
+    #themes{
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        text-align: center;
+
+
+        button{
+            height: 32px;
+            width: 32px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #themes-options{
+            position: absolute;
+            display: none;
+            bottom: 32px;
+
+            button{ margin-bottom: 8px; border-radius: 50px; cursor: pointer; }
+        }
+
+        &:hover > #themes-options{
+            display: block;
+        }
+    }
 }
 
 @function generate-purple-theme(){
     $theme: (
         "background": #0a0913,
-        "foreign": #202060,
+        "foreign": #1f133b,
         "primary": #b030b0,
         "accent": #6e2a91,
         "warn": #c75f5f,
@@ -61,5 +89,5 @@
     @include generic-theme($theme);
     @include nav-theme($theme);
     @include home-theme($theme);
-    @include contect-theme($theme);
+    @include contact-theme($theme);
 }

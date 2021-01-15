@@ -8,9 +8,9 @@ interface socialsResponse{
 
 @Handler({
     targetHTML: 'main',
-    templateURL: 'contect.html'
+    templateURL: 'contact.html'
 })
-export class ContectHandler implements HandlerInitComponent{
+export class ContactHandler implements HandlerInitComponent{
     
     /**
      * fetching the data from the "backend" (git folder called content) and placing the

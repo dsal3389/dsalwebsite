@@ -1,9 +1,9 @@
 
 
-@mixin contect-theme($theme){
+@mixin contact-theme($theme){
     $primary: map-get($theme, "primary");
 
-    #contect{
+    #contact{
         #social{
             
             ul{

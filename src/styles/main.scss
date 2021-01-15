@@ -29,3 +29,8 @@ button{ outline: none; }
     generate-purple-theme()
 );
 
+.red{
+    @include set-theme(
+        generate-red-theme()
+    ); 
+}

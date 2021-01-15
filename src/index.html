@@ -5,16 +5,22 @@
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
     </head>
     <body>
-        <div id='main-nav'>
+        <div id="main-nav">
             <nav class="mw-page">
-                <div>
-                    <a href='#home' class="text">home</a>
-                    <a href="#contect" class="text">contect</a>
+                <div id="nav-links">
+                    <a href="#home" class="text">home</a>
+                    <a href="#contact" class="text">contact</a>
                     <div class="space"></div>
-                    <i class="nf-dev-github_badge"></i>
                     <button id="current-url-btn" class="text">get current URL</button>
                 </div>
             </nav>
+        </div>
+        <div id="themes">
+            <button id="themes-btn">T</button>
+            <div id="themes-options">
+                <button onclick="window.setTheme('red')"></button>
+                <button onclick="window.setTheme('purple')"></button>
+            </div>
         </div>
         <main id="main" class="mw-page"></main>
         <script src='bundle.js'></script>

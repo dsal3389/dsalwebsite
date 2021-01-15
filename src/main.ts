@@ -11,9 +11,16 @@ import './styles/main.scss';
 import { Router } from './scripts/router';
 
 
+declare global{
+    interface Window{
+        setTheme: any;
+    }
+}
+
+
 const appRouter = new Router([
     {path: 'home', handler: import('./scripts/handlers/home').then(h => h.HomeHandler)},
-    {path: 'contect', handler: import('./scripts/handlers/contect').then(h => h.ContectHandler)}
+    {path: 'contact', handler: import('./scripts/handlers/contact').then(h => h.ContactHandler)}
 ]);
 
 
@@ -28,4 +35,9 @@ copyURLbtn.addEventListener('click', (e) => {
     document.execCommand('copy');
     document.body.removeChild(inp);
 });
+
+
+window.setTheme = (theme: string) => {
+    document.documentElement.className=theme;
+}
 

@@ -2,6 +2,7 @@
 
 @mixin nav-theme($theme){
     $primary: map-get($theme, "primary");
+    $foreign: map-get($theme, "foreign");
     $text-color: map-get($theme, "text-color");
 
     $height: 56px;
@@ -16,7 +17,7 @@
             width: 100%;
             height: 100%;
 
-            div{
+            #nav-links{
                 display: flex;
                 padding-top: $middle;
 

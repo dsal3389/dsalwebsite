@@ -1,0 +1,31 @@
+
+
+@mixin skills-theme($theme){
+    #skills{
+        #skill-list{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            .terminal-window{
+                cursor: pointer;
+                flex: 1;
+                margin: 8px;
+                width: 250px;
+                height: 100%;
+
+                .terminal-content{
+                    text-align: center;
+
+                    img{
+                        width: 150px;
+                        min-height: 150px;
+                        text-align: center;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

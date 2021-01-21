@@ -10,7 +10,8 @@ class App{
     constructor(){
         this.router_ = new Router([
             {path: 'home', handler: import('./handlers/home').then(h => h.HomeHandler)},
-            {path: 'contact', handler: import('./handlers/contact').then(h => h.ContactHandler)}
+            {path: 'contact', handler: import('./handlers/contact').then(h => h.ContactHandler)},
+            {path: 'skills', handler: import('./handlers/skills').then(h => h.SkillsHandler)}
         ]);
         this.setTheme(this.theme || '');
     }

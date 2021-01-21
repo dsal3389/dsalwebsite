@@ -1,0 +1,45 @@
+
+
+@mixin terminal-theme($theme){
+    $foreign: map-get($theme, "foreign");
+
+    .terminal-window{
+        overflow: hidden;
+        background-color: #0000005b;
+        
+        .bar{
+            display: flex;
+            background-color: $foreign;
+            padding: 4px;
+            justify-content: center;
+            
+            h3{ margin: 0;}
+
+            span{
+                margin-top: 4px;
+                width: 8px;
+                height: 8px;
+                margin-left: 2px;
+                border-radius: 50px;
+
+                &:nth-child(3){
+                    background-color: #8bec9f;
+                }
+
+                &:nth-child(4){
+                    background-color:#ede989;
+                }
+
+                &:nth-child(5){
+                    background-color:#ec655f;
+                }
+            }
+        }
+
+        .terminal-content{
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    }
+}
+

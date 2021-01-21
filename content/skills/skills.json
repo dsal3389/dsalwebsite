@@ -59,6 +59,11 @@
             "name": "sql",
             "image": "image/sql.png",
             "description": "Not a big fan of this, but yeah I know how to use databases..."
+        },
+        {
+            "name": "bash",
+            "image": "images/bash.png",
+            "description": "linux shell scripting"
         }
     ]
 }

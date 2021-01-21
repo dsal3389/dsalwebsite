@@ -18,6 +18,7 @@
 
     body{ background-color: map-get($theme, "background");}
     p{ color: $text-color; }
+    hr{ border-color: $primary; border: 1px 0 0 0}
 
     .text, h1, h2, h3, h4, h5, h6{ color: $header-color }
     .primary{ color: $primary }
@@ -103,4 +104,7 @@
     @include nav-theme($theme);
     @include home-theme($theme);
     @include contact-theme($theme);
+    @include skills-theme($theme);
+
+    @include terminal-theme($theme);
 }

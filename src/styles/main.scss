@@ -1,7 +1,7 @@
 @import "./theme";
 
 
-body{ font-family: Hack, monospace; margin: 0 }
+body{ font-family: Hack, monospace; margin: 0; transition-duration: 250ms; }
 p{ margin-bottom: 14px; line-height: 2; }
 button{ outline: none; }
 

@@ -13,7 +13,7 @@
         {
             "name": "docker",
             "image": "images/docker.png",
-            "description": "A virtualization technology that instead of create a whole system, it creates a \"container\" that uses the host system kernal, ofc this gos deeper, but its not a tutorial here",
+            "description": "A virtualization technology that instead of create a whole system, it creates a \"container\" that uses the host system kernal, ofc this gos deeper, but its not a tutorial here"
         },
         {
             "name": "gnu/linux",

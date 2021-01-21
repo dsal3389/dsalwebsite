@@ -1,0 +1,9 @@
+{
+    "skills": [
+        {
+            "name": "angular",
+            "image": "images/angular.png",
+            "description": "Foo"
+        }
+    ]
+}

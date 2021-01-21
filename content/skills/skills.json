@@ -3,12 +3,62 @@
         {
             "name": "angular",
             "image": "images/angular.png",
-            "description": "Foo"
+            "description": "Javascript framework to build small / big webapps, my favorite tool :)"
         }, 
         {
             "name": "python",
             "image": "images/python.png",
-            "description": "Foo"
+            "description": "Too much to say about this here 8D"
+        },
+        {
+            "name": "docker",
+            "image": "images/docker.png",
+            "description": "A virtualization technology that instead of create a whole system, it creates a \"container\" that uses the host system kernal, ofc this gos deeper, but its not a tutorial here",
+        },
+        {
+            "name": "gnu/linux",
+            "image": "images/linux.png",
+            "description": "Better then windows..."
+        },
+        {
+            "name": "django",
+            "image": "images/django.png",
+            "description": "A python framework for building websites (server side)"
+        },
+        {
+            "name": "javascript",
+            "image": "images/js.png",
+            "description": "\"the language of the internet\", a frontend language for websites"
+        },
+        {
+            "name": "node",
+            "image": "images/node.png",
+            "description": "Allowing to build backends with JS!"
+        },
+        {
+            "name": "c/c++",
+            "image": "images/c.png",
+            "description": "In this language we need to do everything from 0, but for some reason this is my favorite language, its challenging, fast, beautiful (at least for me), simple, ughhhh so much things to say about this language."
+        },
+        {
+            "name": "CCNA",
+            "images": "images/ccna.png",
+            "description": "Network certification!, there is not much to say accept that I got it..."
+        },
+        {
+            "name": "git",
+            "image": "images/git.png",
+            "description": "Well git is a version control, you can see how I use it from github"
+        },
+        {
+            "name": "sass",
+            "image": "images/sass.png",
+            "description": "A css framework that compiled to normal css, you can see how I use it in this website, I use it for themes"
+        },
+        {
+            "name": "sql",
+            "image": "image/sql.png",
+            "description": "Not a big fan of this, but yeah I know how to use databases..."
         }
     ]
 }

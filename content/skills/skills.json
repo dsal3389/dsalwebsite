@@ -4,6 +4,11 @@
             "name": "angular",
             "image": "images/angular.png",
             "description": "Foo"
+        }, 
+        {
+            "name": "python",
+            "image": "images/python.png",
+            "description": "Foo"
         }
     ]
 }

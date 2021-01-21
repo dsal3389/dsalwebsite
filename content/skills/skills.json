@@ -42,7 +42,7 @@
         },
         {
             "name": "CCNA",
-            "images": "images/ccna.png",
+            "image": "images/ccna.png",
             "description": "Network certification!, there is not much to say accept that I got it..."
         },
         {
@@ -57,7 +57,7 @@
         },
         {
             "name": "sql",
-            "image": "image/sql.png",
+            "image": "images/sql.png",
             "description": "Not a big fan of this, but yeah I know how to use databases..."
         },
         {

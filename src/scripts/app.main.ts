@@ -11,7 +11,8 @@ class App{
         this.router_ = new Router([
             {path: 'home', handler: import('./handlers/home').then(h => h.HomeHandler)},
             {path: 'contact', handler: import('./handlers/contact').then(h => h.ContactHandler)},
-            {path: 'skills', handler: import('./handlers/skills').then(h => h.SkillsHandler)}
+            {path: 'skills', handler: import('./handlers/skills').then(h => h.SkillsHandler)},
+            {path: 'resource', handler: import('./handlers/resources').then(h => h.ResourcesHandler)}
         ]);
         this.setTheme(this.theme || '');
     }

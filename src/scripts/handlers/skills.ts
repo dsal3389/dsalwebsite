@@ -24,9 +24,10 @@ export class SkillsHandler implements HandlerInitComponent {
             const skillsList = <HTMLDivElement>document.getElementById('skill-list')!;
             const skillDescription = <HTMLParagraphElement>document.getElementById('skill-description')!;
 
-            fetchJSON<skillsResponse>('skills/skills.json').then(data => {
+            fetchJSON<skillsResponse>('skills.json').then(data => {
                 data['skills'].forEach(s => {
                     const skillContainer = <HTMLDivElement>document.createElement('div');
+                    skillContainer.classList.add('skill');
                     skillContainer.innerHTML = `
                         <div class="terminal-window">
                             <div class="bar">

@@ -17,7 +17,7 @@ export class ContactHandler implements HandlerInitComponent{
      * response in the HTML
      */
     onReady(){
-        fetchJSON<socialsResponse>('about/main.json').then((res) => {
+        fetchJSON<socialsResponse>('main.json').then((res) => {
             const socialHTML = <HTMLUListElement>document.getElementById('social-list');
             let counter = 0;
 

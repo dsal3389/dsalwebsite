@@ -8,21 +8,26 @@
             align-items: center;
             justify-content: center;
 
-            .terminal-window{
-                cursor: pointer;
-                flex: 1;
-                margin: 8px;
-                width: 250px;
-                height: 100%;
+            .skill{
+                height: 250px;
 
-                .terminal-content{
-                    text-align: center;
-
-                    img{
-                        width: 150px;
-                        min-height: 150px;
+                .terminal-window{
+                    cursor: pointer;
+                    flex: 1;
+                    margin: 8px;
+                    width: 250px;
+                    height: 100%;
+    
+                    .terminal-content{
                         text-align: center;
-                        object-fit: cover;
+    
+                        img{
+                            width: 150px;
+                            min-height: 150px;
+                            text-align: center;
+                            object-fit: cover;
+                            -webkit-user-drag: none;
+                        }
                     }
                 }
             }

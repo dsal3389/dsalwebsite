@@ -42,7 +42,7 @@ function createHandler(options: {
      * fetching the remplate, placing the HTML into the DOM and
      * calling onReady when finished
      */
-    fetchHTML(options.template).then(html => {
+    fetchHTML(`html/${options.template}`).then(html => {
         htmlView.innerHTML = (html as string);
         if(component.onReady instanceof Function)
             component.onReady();

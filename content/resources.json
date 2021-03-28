@@ -7,5 +7,14 @@
                 "test": "http://test.com"
             }
         }
+    },
+    "foo":{
+        "foo": "http://foo.com",
+        "oof": {
+            "test": "http://test.com",
+            "test2": {
+                "test": "http://test.com"
+            }
+        }
     }
 }

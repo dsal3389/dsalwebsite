@@ -1,0 +1,26 @@
+
+
+@mixin resources-theme($theme){
+    $primary: map-get($theme, "primary");
+    $accent: map-get($theme, "accent");
+
+    #resources{
+        
+        #resources-list{
+            
+            div{
+
+                span{ font-weight: 500; }
+                ul{ list-style: none; padding-left: 42px; }
+                p{ 
+                    margin: 4px 0;
+                    line-height: 1.1; 
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+
+                a{ color: $accent; }
+            }
+        }
+    }
+}

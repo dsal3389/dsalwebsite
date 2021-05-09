@@ -105,6 +105,7 @@
     @include home-theme($theme);
     @include contact-theme($theme);
     @include skills-theme($theme);
+    @include resources-theme($theme);
 
     @include terminal-theme($theme);
 }
